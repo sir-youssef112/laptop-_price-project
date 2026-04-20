@@ -1,0 +1,88 @@
+C:\Users\youss\PycharmProjects\PythonProject6\.venv\Scripts\python.exe C:\Users\youss\Downloads\project.py 
+      laptop_ID Company  ...  Weight Price_euros
+0             1   Apple  ...  1.37kg     1339.69
+1             2   Apple  ...  1.34kg      898.94
+2             3      HP  ...  1.86kg      575.00
+3             4   Apple  ...  1.83kg     2537.45
+4             5   Apple  ...  1.37kg     1803.60
+...         ...     ...  ...     ...         ...
+1298       1316  Lenovo  ...   1.8kg      638.00
+1299       1317  Lenovo  ...       0     1499.00
+1300       1318  Lenovo  ...   1.5kg      229.00
+1301       1319      HP  ...  2.19kg      764.00
+1302       1320    Asus  ...   2.2kg      369.00
+
+[1303 rows x 13 columns]
+the shape of the data set (1303, 13)
+the columns-->
+Index(['laptop_ID', 'Company', 'Product', 'TypeName', 'Inches',
+       'ScreenResolution', 'Cpu', 'Ram', 'Memory', 'Gpu', 'OpSys', 'Weight',
+       'Price_euros'],
+      dtype='object')
+type of columns laptop_ID             int64
+Company              object
+Product              object
+TypeName             object
+Inches              float64
+ScreenResolution     object
+Cpu                  object
+Ram                  object
+Memory               object
+Gpu                  object
+OpSys                object
+Weight              float64
+Price_euros         float64
+dtype: object
+nulls in data -->
+laptop_ID           0
+Company             0
+Product             0
+TypeName            0
+Inches              0
+ScreenResolution    0
+Cpu                 0
+Ram                 0
+Memory              0
+Gpu                 0
+OpSys               0
+Weight              0
+Price_euros         0
+dtype: int64
+number of dublicates : 0
+         laptop_ID       Inches       Weight  Price_euros
+count  1261.000000  1261.000000  1261.000000  1261.000000
+mean    661.800159    15.011816     2.036233  1119.074988
+std     381.661243     1.429928     0.664395   700.675846
+min       1.000000    10.100000     0.690000   174.000000
+25%     334.000000    14.000000     1.500000   598.900000
+50%     660.000000    15.600000     2.040000   973.000000
+75%     994.000000    15.600000     2.300000  1479.000000
+max    1320.000000    18.400000     4.700000  6099.000000
+      laptop_ID Company  ... Weight Price_euros
+0             1   apple  ...   1.37     1339.69
+1             2   apple  ...   1.34      898.94
+2             3      hp  ...   1.86      575.00
+3             4   apple  ...   1.83     2537.45
+4             5   apple  ...   1.37     1803.60
+...         ...     ...  ...    ...         ...
+1297       1315    asus  ...   2.20      720.32
+1298       1316  lenovo  ...   1.80      638.00
+1300       1318  lenovo  ...   1.50      229.00
+1301       1319      hp  ...   2.19      764.00
+1302       1320    asus  ...   2.20      369.00
+
+[1261 rows x 13 columns]
+laptop_ID           0
+Company             0
+Product             0
+TypeName            0
+Inches              0
+ScreenResolution    0
+Cpu                 0
+Ram                 0
+Memory              0
+Gpu                 0
+OpSys               0
+Weight              0
+Price_euros         0
+dtype: int64
