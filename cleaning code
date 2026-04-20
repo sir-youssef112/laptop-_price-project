@@ -1,0 +1,55 @@
+from bs4 import BeautifulSoup
+import pandas as pd
+from matplotlib import pyplot as plt
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('laptop_price.csv', encoding='latin1')
+
+print(df)
+
+shape=df.shape
+print(f"the shape of the data set {shape}")
+
+print(f"the columns-->\n{df.columns}")
+
+df['Weight'] = df['Weight'].str.replace('kg', '')
+df['Weight'] = pd.to_numeric(df['Weight'], errors='coerce')
+df = df[df['Weight'] != 0]
+
+print(f"type of columns {df.dtypes}")
+
+
+
+print(f"nulls in data -->\n{df.isna().sum()}")
+d=df.duplicated().sum()
+print(f'number of dublicates : {d}')
+
+df['Company'] = df['Company'].astype(str).str.strip().str.lower()
+df['Product'] = df['Product'].astype(str).str.strip().str.lower()
+df['TypeName'] = df['TypeName'].astype(str).str.strip().str.lower()
+
+print(df.describe())
+
+numerical_features = df.select_dtypes(include=['int64', 'float64']).columns.tolist()
+df[numerical_features].describe()
+
+print(df)
+
+df1=df.dropna()
+print(df1.isna().sum())
+
+
+
+df_clean = df1.copy()
+
+num_cols = df_clean.select_dtypes(include=['int64', 'float64'])
+
+corr = num_cols.corr()
+
+
+plt.figure(figsize=(10,6))
+sns.heatmap(corr, annot=True, cmap='coolwarm')
+
+plt.title("Correlation Heatmap")
+plt.show()
